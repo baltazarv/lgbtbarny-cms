@@ -1,0 +1,18 @@
+{
+  "info": {
+    "name": "fee",
+    "description": ""
+  },
+  "connection": "default",
+  "collectionName": "Fee",
+  "attributes": {
+    "description": {
+      "required": true,
+      "type": "string"
+    },
+    "amount": {
+      "type": "decimal",
+      "required": true
+    }
+  }
+}

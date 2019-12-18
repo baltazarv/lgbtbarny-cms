@@ -1,0 +1,30 @@
+{
+  "connection": "default",
+  "collectionName": "Product Purchase",
+  "info": {
+    "name": "purchase",
+    "description": "One or multiple products bought during a transaction. Aka line item."
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "product": {
+      "model": "product",
+      "via": "purchases"
+    },
+    "quanity": {
+      "type": "integer",
+      "required": true
+    },
+    "payments": {
+      "collection": "payment",
+      "via": "purchase"
+    }
+  }
+}

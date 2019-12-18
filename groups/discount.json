@@ -1,0 +1,21 @@
+{
+  "info": {
+    "name": "discount",
+    "description": ""
+  },
+  "connection": "default",
+  "collectionName": "Discount",
+  "attributes": {
+    "description": {
+      "required": true,
+      "type": "string"
+    },
+    "amount": {
+      "type": "decimal",
+      "required": false
+    },
+    "percentage": {
+      "type": "integer"
+    }
+  }
+}

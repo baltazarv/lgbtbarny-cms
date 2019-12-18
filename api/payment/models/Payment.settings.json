@@ -1,0 +1,62 @@
+{
+  "connection": "default",
+  "collectionName": "Payment",
+  "info": {
+    "name": "payment",
+    "description": "Aka invoice."
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "type": {
+      "enum": [
+        "credit_card",
+        "check"
+      ],
+      "required": true,
+      "type": "enumeration"
+    },
+    "account": {
+      "enum": [
+        "Foundation",
+        "Association"
+      ],
+      "type": "enumeration"
+    },
+    "products": {
+      "collection": "product",
+      "via": "payments",
+      "dominant": true
+    },
+    "users": {
+      "collection": "user",
+      "via": "payments",
+      "dominant": true,
+      "plugin": "users-permissions"
+    },
+    "date": {
+      "required": true,
+      "type": "date"
+    },
+    "Status": {
+      "enum": [
+        "paid",
+        "pending"
+      ],
+      "type": "enumeration"
+    },
+    "purchase": {
+      "model": "purchase",
+      "via": "payments"
+    },
+    "total": {
+      "type": "decimal"
+    }
+  }
+}

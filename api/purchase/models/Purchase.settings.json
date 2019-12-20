@@ -14,10 +14,6 @@
     "comment": ""
   },
   "attributes": {
-    "product": {
-      "model": "product",
-      "via": "purchases"
-    },
     "quanity": {
       "type": "integer",
       "required": true
@@ -25,6 +21,10 @@
     "payments": {
       "collection": "payment",
       "via": "purchase"
+    },
+    "product": {
+      "model": "product",
+      "via": "purchases"
     }
   }
 }

@@ -42,6 +42,15 @@
     "payments": {
       "collection": "payment",
       "via": "products"
+    },
+    "packages": {
+      "collection": "product",
+      "via": "package_products",
+      "dominant": true
+    },
+    "package_products": {
+      "collection": "product",
+      "via": "packages"
     }
   }
 }

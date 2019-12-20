@@ -13,6 +13,9 @@
     "amount": {
       "type": "decimal",
       "required": true
+    },
+    "percentage": {
+      "type": "integer"
     }
   }
 }

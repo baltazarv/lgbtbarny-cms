@@ -29,11 +29,6 @@
       ],
       "type": "enumeration"
     },
-    "products": {
-      "collection": "product",
-      "via": "payments",
-      "dominant": true
-    },
     "users": {
       "collection": "user",
       "via": "payments",
@@ -57,6 +52,11 @@
     },
     "total": {
       "type": "decimal"
+    },
+    "products": {
+      "collection": "product",
+      "dominant": true,
+      "via": "payments"
     }
   }
 }

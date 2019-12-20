@@ -1,3 +1,3 @@
 # Strapi application
 
-A quick description of your strapi application
+Install Strapi globally: `npm install strapi@alpha -g`

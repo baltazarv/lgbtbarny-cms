@@ -1,6 +1,6 @@
 {
   "connection": "default",
-  "collectionName": "Product",
+  "collectionName": "products",
   "info": {
     "name": "product",
     "description": ""
@@ -14,35 +14,6 @@
     "comment": ""
   },
   "attributes": {
-    "type": {
-      "required": true,
-      "type": "string"
-    },
-    "discount": {
-      "group": "discount",
-      "repeatable": true,
-      "type": "group"
-    },
-    "fee": {
-      "group": "fee",
-      "repeatable": true,
-      "required": true,
-      "type": "group"
-    },
-    "users": {
-      "collection": "user",
-      "via": "products",
-      "dominant": true,
-      "plugin": "users-permissions"
-    },
-    "purchases": {
-      "collection": "purchase",
-      "via": "product"
-    },
-    "payments": {
-      "collection": "payment",
-      "via": "products"
-    },
     "packages": {
       "collection": "product",
       "via": "package_products",
@@ -51,6 +22,19 @@
     "package_products": {
       "collection": "product",
       "via": "packages"
+    },
+    "category": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "lineitems": {
+      "collection": "lineitem",
+      "via": "product"
     }
   }
 }

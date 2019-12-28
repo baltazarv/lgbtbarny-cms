@@ -1,9 +1,9 @@
 {
   "connection": "default",
-  "collectionName": "Payment",
+  "collectionName": "orders",
   "info": {
-    "name": "payment",
-    "description": "Aka invoice."
+    "name": "order",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -29,34 +29,28 @@
       ],
       "type": "enumeration"
     },
-    "users": {
-      "collection": "user",
-      "via": "payments",
-      "dominant": true,
+    "user": {
+      "model": "user",
+      "via": "orders",
       "plugin": "users-permissions"
     },
     "date": {
       "required": true,
       "type": "date"
     },
-    "Status": {
+    "status": {
       "enum": [
         "paid",
         "pending"
       ],
       "type": "enumeration"
     },
-    "purchase": {
-      "model": "purchase",
-      "via": "payments"
-    },
     "total": {
       "type": "decimal"
     },
-    "products": {
-      "collection": "product",
-      "dominant": true,
-      "via": "payments"
+    "lineitems": {
+      "collection": "lineitem",
+      "via": "order"
     }
   }
 }

@@ -1,9 +1,9 @@
 {
   "connection": "default",
-  "collectionName": "Product Purchase",
+  "collectionName": "line_items",
   "info": {
-    "name": "purchase",
-    "description": "One or multiple products bought during a transaction. Aka line item."
+    "name": "lineitem",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -14,17 +14,20 @@
     "comment": ""
   },
   "attributes": {
-    "quanity": {
+    "quantity": {
       "type": "integer",
       "required": true
     },
-    "payments": {
-      "collection": "payment",
-      "via": "purchase"
+    "order": {
+      "model": "order",
+      "via": "lineitems"
+    },
+    "first_time_member": {
+      "type": "boolean"
     },
     "product": {
       "model": "product",
-      "via": "purchases"
+      "via": "lineitems"
     }
   }
 }

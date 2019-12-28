@@ -9,7 +9,9 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "axios": "^0.19.0"
+  },
   "dependencies": {
     "knex": "latest",
     "pg": "^7.15.0",
@@ -21,6 +23,7 @@
     "strapi-plugin-content-manager": "3.0.0-beta.17.8",
     "strapi-plugin-content-type-builder": "3.0.0-beta.17.8",
     "strapi-plugin-email": "3.0.0-beta.17.8",
+    "strapi-plugin-graphql": "3.0.0-beta.17.8",
     "strapi-plugin-upload": "3.0.0-beta.17.8",
     "strapi-plugin-users-permissions": "3.0.0-beta.17.8",
     "strapi-provider-upload-aws-s3": "^3.0.0-beta.18",

@@ -47,6 +47,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "POST",
+      "path": "/products/seed",
+      "handler": "Product.seed",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }

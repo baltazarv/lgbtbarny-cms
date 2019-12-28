@@ -56,13 +56,9 @@
       "plugin": "users-permissions",
       "configurable": false
     },
-    "payments": {
-      "collection": "payment",
-      "via": "users"
-    },
-    "products": {
-      "collection": "product",
-      "via": "users"
+    "orders": {
+      "collection": "order",
+      "via": "user"
     }
   }
 }
